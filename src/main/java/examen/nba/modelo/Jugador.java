@@ -118,4 +118,12 @@ public class Jugador implements Serializable {
 		this.equipo = equipo;
 	}
 
+	@Override
+	public String toString() {
+		return "Jugador [id=" + id + ", altura=" + altura + ", nombre=" + nombre + ", peso=" + peso + ", posicion="
+				+ posicion + ", procedencia=" + procedencia + "]";
+	}
+	
+	
+
 }
