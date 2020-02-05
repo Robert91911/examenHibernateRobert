@@ -2,6 +2,7 @@ package examen.nba;
 
 import javax.persistence.EntityManager;
 
+import examen.nba.controlador.EquipoController;
 import examen.nba.controlador.JugadorController;
 import examen.nba.persistencia.jpa.Utilidades;
 
@@ -19,9 +20,14 @@ public class App
     	try {
     	em = Utilidades.getEntityManagerFactory().createEntityManager();
         JugadorController jugador = new JugadorController();
+        EquipoController equipo = new EquipoController();
         
         
-        jugador.ejercicio1();
+        jugador.ejercicio5();
+//        equipo.ejercicio6();
+//        jugador.ejercicio7();
+//        jugador.ejercicio8();
+//        jugador.ejercicio10();
         
         
     	} catch (Exception e) {

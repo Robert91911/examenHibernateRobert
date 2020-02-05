@@ -24,4 +24,17 @@ public class JugadorDAOImplsJpa extends GenericDAOImplJpa<Jugador,Integer> imple
 		return jugador;
 	}
 
+	
+	public List<Object[]> ejercicio7() {
+		EntityManager em = Utilidades.getEntityManagerFactory().createEntityManager();
+		@SuppressWarnings("unchecked")
+		List<Object[]> lista =  (List<Object[]>) em.createQuery(
+				"select J.nombre, COUNT(*) " +
+				"from Jugador J " +
+				"group by J.id")
+				.getResultList();
+		//Join .j estadisticas join equipo
+				
+		return lista;
+	}
 }
